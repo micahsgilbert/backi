@@ -1,0 +1,36 @@
+scenes:
+  - name: scroll-top
+    position: 0
+    style:
+      backgroundColor: "#ff0000"
+      opacity: 1
+    sprites:
+      test:
+        top: 400px
+        left: "0%"
+
+  - name: scroll-middle
+    position: 0.5
+    style:
+      backgroundColor: "#00ff00"
+    sprites:
+      test:
+        top: 0px
+        left: "20%"
+
+  - name: scroll-bottom
+    position: 1
+    style:
+      backgroundColor: "#0000ff"
+      opacity: 0.2
+    sprites:
+      test:
+        top: 100px
+        left: "100%"
+
+sprites:
+  test:
+    type: image
+    width: 100
+    height: 100
+    src: "placeholder.jpg"
