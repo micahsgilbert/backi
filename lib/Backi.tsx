@@ -1,4 +1,3 @@
-import './backi.scss'
 import { useEffect, useState } from 'react'
 import getVerticalScrollPercentage from './helpers/getVerticalScrollPercentage'
 import { generateBackiStyle } from './style'
@@ -34,10 +33,10 @@ const Backi = (props:BackiProps) => {
   }, [progress])
 
   return (
-    <div id="backi-main" style={style}>
+    <div id="backi-main" style={{...style, position: "absolute", top: 0, left: 0, bottom: 0, right: 0}}>
     {sprites.map((sprite, idx) => <div key={idx}>{sprite}</div>)}
     </div>
   )
 }
 
-export default Backi
+export { Backi }

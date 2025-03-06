@@ -24,6 +24,6 @@
       "@modyfi/vite-plugin-yaml/modules"
     ]
   },
-  "include": ["src"],
+  "include": ["src", "lib"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

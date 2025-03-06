@@ -18,7 +18,7 @@ createRoot(document.getElementById("backi")!).render(
   </React.StrictMode>
 )
 ```
-The `Backi` component will fill up whatever it is placed in, so in this example, the `#backi` element is set to fill up the background of the page.
+The `Backi` component will fill up whatever it is placed in, by being absolutely positioned and having `top,left,bottom,right` all set to `0`. In this example, the `#backi` element is set to fill up the background of the page, but you could also just throw it as the first thing in the body and in most situations, it will fill up the background automatically. Or, you could deliberately make it fill a certain area by positioning its container how you want.
 
 ## Configuration
 
