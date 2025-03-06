@@ -96,3 +96,6 @@ For `styles`, think of all of the Backi component being a big sprite. The styles
 - GIF/image animation support
 - Implement interpolation for parameters, such as `calc` and `transform: translate(x, y)`
 - Generate a static map, or at least static piece of JS, from which styles at any given point (to some degree of granularity) are all computed
+- Zones around scenes that guarantee their appearance within a range of their defined position
+- make home page code reflect the actual yaml instead of just me copying and pasting it
+- Allow 0 to interpolate with pixels and percents

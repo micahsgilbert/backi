@@ -21,7 +21,7 @@ interface IDictionary<TValue> {
 interface Sprite {
   width: number 
   height: number
-  type: "image" | "box"
+  type: "image" | "div"
 }
 
 interface ImageSprite extends Sprite {

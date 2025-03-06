@@ -5,8 +5,9 @@ import CSS from "csstype"
 
 const computeStyleInterpolations = (styleBreakpoints: StyleBreakpoint[], progress: number) : (CSS.Properties) => {
   const finalStyle:CSS.Properties = {}
+  if (!styleBreakpoints) return finalStyle
   const sortedBreakpoints = styleBreakpoints.sort((a: StyleBreakpoint, b:StyleBreakpoint) => a.position - b.position)
-  const stylesToCompute:string[] = styleBreakpoints.reduce((a:string[], b:StyleBreakpoint) => merge(a, Object.keys(b.style as Object)), [])
+  const stylesToCompute:string[] = styleBreakpoints.filter(a => a.style).reduce((a:string[], b:StyleBreakpoint) => merge(a, Object.keys(b.style as Object)), [])
 
   for (const styleToCompute of stylesToCompute) {
 

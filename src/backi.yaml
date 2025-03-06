@@ -1,36 +1,94 @@
 scenes:
-  - name: scroll-top
+  - name: page-top
     position: 0
     style:
-      backgroundColor: "#ff0000"
-      opacity: 1
-    sprites:
-      test:
-        top: 400px
-        left: "0%"
+      backgroundColor: "#2e3440"
 
-  - name: scroll-middle
-    position: 0.5
+  - name: start-boxes-open
+    position: 0.25
     style:
-      backgroundColor: "#00ff00"
+      backgroundColor: "#000000"
     sprites:
-      test:
-        top: 0px
-        left: "20%"
+      box1:
+        top: 0%
+        left: 0%
+        bottom: 0%
+        right: 100%
+        backgroundColor: "#8FBCBB"
+        zIndex: 2
+      box2:
+        top: 0%
+        left: 25%
+        bottom: 0%
+        right: 75%
+        backgroundColor: "#88C0D0"
+      box3:
+        top: 0%
+        left: 50%
+        bottom: 0%
+        right: 50%
+        backgroundColor: "#81A1C1"
+      box4:
+        top: 0%
+        left: 75%
+        bottom: 0%
+        right: 25%
+        backgroundColor: "#5E81AC"
 
-  - name: scroll-bottom
+  - name: boxes-fully-open
+    position: 0.5
+    sprites:
+      box1:
+        left: 0%
+        right: 75%
+        opacity: 1
+      box2:
+        left: 25%
+        right: 50%
+        opacity: 1
+      box3:
+        left: 50%
+        right: 25%
+        opacity: 1
+      box4:
+        left: 75%
+        right: 0%
+        opacity: 1
+
+  - name: boxes-gone
+    position: 0.75
+    style:
+      backgroundColor: "#000000"
+    sprites:
+      box1:
+        bottom: 100%
+        opacity: 0
+      box2:
+        left: 0%
+        opacity: 0
+      box3:
+        right: 0%
+        opacity: 0
+      box4:
+        top: 100%
+        opacity: 0
+
+  - name: page-bottom-clamp
+    position: 0.98
+    style:
+      backgroundcolor: "#000000"
+
+  - name: page-bottom
     position: 1
     style:
-      backgroundColor: "#0000ff"
-      opacity: 0.2
-    sprites:
-      test:
-        top: 100px
-        left: "100%"
+      backgroundcolor: "#eceff4"
 
 sprites:
-  test:
-    type: image
-    width: 100
-    height: 100
-    src: "placeholder.jpg"
+  box1:
+    type: div
+  box2:
+    type: div
+  box3:
+    type: div
+  box4:
+    type: div

@@ -1,16 +1,53 @@
-body {
-  font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+
+@mixin roboto-flex {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+  "slnt" 0,
+  "wdth" 100,
+  "GRAD" 0,
+  "XOPQ" 96,
+  "XTRA" 468,
+  "YOPQ" 79,
+  "YTAS" 750,
+  "YTDE" -203,
+  "YTFI" 738,
+  "YTLC" 514,
+  "YTUC" 712;
 }
 
-#readme {
-  max-width: 400px;
-  margin: 24px auto;
-  padding: 16px;
-  border: 2px solid black;
-  border-radius: 16px;
-  background-color: rgba(255,255,255,0.8);
-  h1,h2 {
-    text-align: center;
+body {
+  color: #ECEFF4;
+  @include roboto-flex;
+  font-weight: 400;
+  margin: 0;
+}
+
+.roboto-flex-semibold {
+  @include roboto-flex;
+  font-weight: 600;
+}
+
+.roboto-flex-regular {
+  @include roboto-flex;
+  font-weight: 400;
+}
+
+#super-title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  h1 {
+    font-size: 10rem;
+    margin: 0px;
+  }
+  h2 {
+    font-size: 2rem;
+    margin: 0px;
   }
 }
 
@@ -21,4 +58,69 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: -1;
+}
+
+.full-panel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  .code-container {
+    position: relative;
+    code {
+      white-space: pre;
+      padding: 16px 32px;
+      background-color: #ECEFF4;
+      color: black;
+      font-weight: bold;
+      display: block;
+      top: 0;
+      right: 0;
+      left: 0;
+      position: absolute;
+      font-size: 14px;
+      z-index: 99
+    }
+    &-line-thru:after {
+      display: block;
+      width: 6px;
+      height: 100%;
+      background-color: #ECEFF4AA;
+      position: absolute;
+      left: calc(50% - 3px);
+      content: ''
+    }
+  }
+}
+
+.full-panel-left-weighted {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-column-gap: 32px;
+}
+
+.full-panel-right-weighted {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-column-gap: 32px;
+}
+
+.col {
+  max-width: 960px;
+  margin: 0 auto;
+  h2 {
+    font-size: 4rem;
+    margin: 0;
+  }
+  p {
+    font-size: 2rem;
+    margin: 0;
+  }
+}
+
+#ee {
+  color: black !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  user-select: none;
 }

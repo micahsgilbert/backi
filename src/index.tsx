@@ -7,6 +7,8 @@ import { html } from '../README.md'
 
 import {BackiConfig} from './types'
 
+console.log(backiConfig)
+
 createRoot(document.getElementById("backi")!).render(
   <React.StrictMode>
   <Backi config={backiConfig as BackiConfig}/>

@@ -5,6 +5,157 @@
   </head>
   <body>
     <div id="backi"></div>
-    <div id="readme"></div>
+
+    <div class="col full-panel full-panel-right-weighted">
+      <div class="code-container code-container-line-thru"> 
+      <code>
+<span style="font-size: 20px;">$ cat backi.yaml</span>
+
+scenes:
+  - name: page-top
+    position: 0
+    style:
+      backgroundColor: "#2e3440"
+      </code>
+      </div>
+      <div>
+      <div id="super-title">
+        <h1 class="roboto-flex-semibold">BACKI</h1>
+        <h2 class="roboto-flex-regular">Declaratively create beautiful scrolling backgrounds for your pages, using YAML and your imagination.</h2>
+      </div>
+      </div>
+    </div>
+
+    <div class="col full-panel full-panel-right-weighted">
+      <div class="code-container code-container-line-thru"> 
+        <code style="position: absolute; right: 0">
+  - name: start-boxes-open
+    position: 0.25
+    style:
+      backgroundColor: "#000000"
+    sprites:
+      box1:
+        top: 0%
+        left: 0%
+        bottom: 0%
+        right: 100%
+        backgroundColor: "#8FBCBB"
+        zIndex: 2
+      box2:
+        top: 0%
+        left: 25%
+        bottom: 0%
+        right: 75%
+        backgroundColor: "#88C0D0"
+      box3:
+        top: 0%
+        left: 50%
+        bottom: 0%
+        right: 50%
+        backgroundColor: "#81A1C1"
+      box4:
+        top: 0%
+        left: 75%
+        bottom: 0%
+        right: 25%
+        backgroundColor: "#5E81AC"
+        </code>
+      </div>
+      <div>
+        <h2 class="roboto-flex-semibold">Scenes</h2> 
+        <p>Define scenes for you site's background, to enhance critical points and reveals, or to create gradual change as the user scrolls through. </p>
+      </div>
+    </div>
+
+    <div class="col full-panel full-panel-right-weighted">
+      <div class="code-container code-container-line-thru">
+        <code>
+  - name: boxes-fully-open
+    position: 0.5
+    sprites:
+      box1:
+        left: 0%
+        right: 75%
+        opacity: 1
+      box2:
+        left: 25%
+        right: 50%
+        opacity: 1
+      box3:
+        left: 50%
+        right: 25%
+        opacity: 1
+      box4:
+        left: 75%
+        right: 0%
+        opacity: 1
+        </code>
+      </div>
+      <div>
+        <h2 class="roboto-flex-semibold">Sprites</h2> 
+        <p>Make your site dance, or just give it some more pop. Declaratively interpolate CSS properties for the positions or styles of anything you need.</p>
+      </div>
+    </div>
+
+    <div class="col full-panel full-panel-right-weighted">
+      <div class="code-container">
+        <code>
+- name: boxes-gone
+    position: 0.75
+    style:
+      backgroundColor: "#000000"
+    sprites:
+      box1:
+        bottom: 100%
+        opacity: 0
+      box2:
+        left: 0%
+        opacity: 0
+      box3:
+        right: 0%
+        opacity: 0
+      box4:
+        top: 100%
+        opacity: 0
+
+  - name: page-bottom-clamp
+    position: 0.98
+    style:
+      backgroundcolor: "#000000"
+
+  - name: page-bottom
+    position: 1
+    style:
+      backgroundcolor: "#eceff4"
+
+sprites:
+  box1:
+    type: div
+  box2:
+    type: div
+  box3:
+    type: div
+  box4:
+    type: div
+        </code>
+      </div>
+      <div>
+        <h2 class="roboto-flex-semibold">Customizability</h2> 
+        <p>Hook into Backi's interpolation with your own code. You can let Backi take care of scroll-dependent state for your components, or define your own custom interpolation algorithms to get exactly the result you want.</p>
+      </div>
+    </div>
+    <div class="col full-panel">
+      <h2>Contribute</h2>
+      <div class="code-container">
+        <code style="font-size: 20px">
+$ git clone <a href="https://github.com/micahsgilbert/backi">https://github.com/micahsgilbert/backi</a>
+        </code>
+      </div>
+      <div id="ee">
+      <p>
+        Backi also makes easter eggs a lot more fun :)
+      </p>
+      </div>
+    </div>
   </body>
 </html>

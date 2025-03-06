@@ -4,6 +4,8 @@ import { createElement } from 'react'
 
 const generateSprites = (config: BackiConfig , progress:number) : React.ReactElement[] => {
   const spriteList = config.sprites 
+  if (!spriteList) { return [] }
+
   return Object.keys(spriteList as Object).map(spriteName => {
     const sprite = spriteList[spriteName]
 
@@ -20,6 +22,7 @@ const generateSprites = (config: BackiConfig , progress:number) : React.ReactEle
     }
     
     const style = computeStyleInterpolations(spriteBreakpoints, progress)
+    style.position = "absolute"
 
     let elem
 
@@ -27,9 +30,11 @@ const generateSprites = (config: BackiConfig , progress:number) : React.ReactEle
       const src = (sprite as ImageSprite).src
       const width = sprite.width
       const height = sprite.height
-      style.position = "absolute"
       elem = createElement("img", {src, width, height, style})
+    }
 
+    if (sprite.type == "div") {
+      elem = createElement("div", {style})
     }
 
     if (elem) {
