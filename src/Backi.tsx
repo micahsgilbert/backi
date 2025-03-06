@@ -1,5 +1,5 @@
 import './backi.scss'
-import { useEffect, useState, useMemo, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import getVerticalScrollPercentage from './helpers/getVerticalScrollPercentage'
 import { generateBackiStyle } from './style'
 import generateSprites from './sprites'
@@ -13,7 +13,7 @@ declare module 'csstype' {
 
 const Backi = (props:BackiProps) => {
   const [style, setStyle] = useState({})
-  const [sprites, setSprites] = useState([] as ReactElement[])
+  const [sprites, setSprites] = useState([] as React.ReactElement[])
   const [progress, setProgress] = useState(getVerticalScrollPercentage(document.body))
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Backi = (props:BackiProps) => {
 
   return (
     <div id="backi-main" style={style}>
-    {sprites}
+    {sprites.map((sprite, idx) => <div key={idx}>{sprite}</div>)}
     </div>
   )
 }

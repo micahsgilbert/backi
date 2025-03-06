@@ -11,7 +11,11 @@ type Nullable<T> = T | null
 
 interface BackiConfig {
   scenes: Scene[]
-  sprites: Sprite[]
+  sprites: IDictionary<Sprite>;
+}
+
+interface IDictionary<TValue> {
+  [id: string]: TValue
 }
 
 interface Sprite {

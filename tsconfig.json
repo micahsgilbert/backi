@@ -20,11 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
     "types": [
       "@modyfi/vite-plugin-yaml/modules"
     ]

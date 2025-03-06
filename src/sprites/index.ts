@@ -1,11 +1,11 @@
-import { BackiConfig, ImageSprite, Sprite, StyleBreakpoint } from "../types";
+import { BackiConfig, ImageSprite, StyleBreakpoint } from "../types";
 import { computeStyleInterpolations } from "../style";
 import { createElement } from 'react'
 
-const generateSprites = (config: BackiConfig , progress:number) : ReactElement[] => {
+const generateSprites = (config: BackiConfig , progress:number) : React.ReactElement[] => {
   const spriteList = config.sprites 
   return Object.keys(spriteList as Object).map(spriteName => {
-    const sprite = spriteList[spriteName] as Sprite
+    const sprite = spriteList[spriteName]
 
     const spriteBreakpoints:StyleBreakpoint[] = []
     for (const scene of config.scenes) {
