@@ -76,12 +76,12 @@ scenes:
   - name: page-bottom-clamp
     position: 0.98
     style:
-      backgroundcolor: "#000000"
+      backgroundColor: "#000000"
 
   - name: page-bottom
     position: 1
     style:
-      backgroundcolor: "#eceff4"
+      backgroundColor: "#eceff4"
 
 sprites:
   box1:
